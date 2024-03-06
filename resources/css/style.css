@@ -376,12 +376,20 @@ body {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 
-td, .td-adj, th {
+td,
+.td-adj,
+th {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 28px;
   color: #00244e !important;
   font-weight: 700 !important;
+}
+
+.td-adj,
+.inputWrapper,
+.actions {
+  padding: 0.5rem !important;
 }
 
 th {
@@ -397,11 +405,12 @@ th {
 }
 
 .survey-section {
-  background-color: #EFEFEF;
+  background-color: #efefef;
 }
 
 .wForm .matrixLayout th.headerCol {
   width: 50%;
+  padding: 0.5rem;
 }
 
 .MsoNormal {
@@ -428,11 +437,11 @@ th {
 .smile {
   border-radius: 50%;
   box-shadow: -3px 12px 2px -1px #fdb913;
-  transform: translate(73px, -166px);
+  transform: translate(0, -166px);
   float: right;
   display: block;
   margin: 0 auto; /* This will center the image horizontally */
-  width: 40%; /* Ensure the image doesn't exceed the width of its container */
+  width: 30%; /* Ensure the image doesn't exceed the width of its container */
   height: auto;
 }
 
@@ -449,5 +458,16 @@ th {
   .smile {
     float: none;
     transform: none;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .wForm .matrixLayout.stacked tr {
+    display: inline-table !important;
+  }
+  .belong-section {
+    background: linear-gradient(rgba(0, 36, 78, 0.8), rgba(0, 36, 78, 0.8));
+    background-position: center top;
+    background-repeat: no-repeat;
   }
 }/*# sourceMappingURL=style.css.map */
