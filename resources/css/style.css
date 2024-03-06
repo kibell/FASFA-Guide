@@ -163,10 +163,6 @@ $font-size-7xl: 4rem; /*64px */
 /* 36px */
 /* 40px  h1 tag* /
 $font-size-7xl: 4rem; /*64px */
-section {
-  margin: 5rem 0 5rem 0;
-}
-
 h1 {
   color: #0a3370;
   font-size: 2.5rem;
@@ -226,11 +222,6 @@ a {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 576px) {
-  section {
-    margin: 2.5rem 0 2.5rem 0;
-  }
-}
 /* Font size */
 /* 18px */
 /*20 px*/
@@ -322,10 +313,6 @@ footer.mobile {
 /* 36px */
 /* 40px  h1 tag* /
 $font-size-7xl: 4rem; /*64px */
-section {
-  margin: 5rem 0 5rem 0;
-}
-
 h1 {
   color: #0a3370;
   font-size: 2.5rem;
@@ -385,23 +372,82 @@ a {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 576px) {
-  section {
-    margin: 2.5rem 0 2.5rem 0;
-  }
-}
 body {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 
-td, .td-adj {
+td, .td-adj, th {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 28px;
-  color: #00244e;
-  font-weight: 700;
+  color: #00244e !important;
+  font-weight: 700 !important;
+}
+
+th {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 16px !important;
+  line-height: 28px;
+  color: #00244e !important;
+  font-weight: 700 !important;
 }
 
 .border-bottom {
   height: 5rem;
+}
+
+.survey-section {
+  background-color: #EFEFEF;
+}
+
+.wForm .matrixLayout th.headerCol {
+  width: 50%;
+}
+
+.MsoNormal {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 16px !important;
+  line-height: 28px;
+  color: #00244e !important;
+  font-weight: 700 !important;
+}
+
+.borderbottom {
+  border: none !important;
+  border-bottom: solid 1px #00244e !important;
+  height: 78px;
+}
+
+/* Rectangle 52 */
+.belong-section {
+  background: linear-gradient(rgba(0, 36, 78, 0.8), rgba(0, 36, 78, 0.8)), url(../images/campus.png);
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.smile {
+  border-radius: 50%;
+  box-shadow: -3px 12px 2px -1px #fdb913;
+  transform: translate(73px, -166px);
+  float: right;
+  display: block;
+  margin: 0 auto; /* This will center the image horizontally */
+  width: 40%; /* Ensure the image doesn't exceed the width of its container */
+  height: auto;
+}
+
+.wForm .matrixLayout .label {
+  padding: 0 !important;
+}
+
+.back-link {
+  font-size: 12px;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+@media only screen and (max-width: 576px) {
+  .smile {
+    float: none;
+    transform: none;
+  }
 }/*# sourceMappingURL=style.css.map */
