@@ -23,7 +23,303 @@
 
 
   <style>
+/* Font size */
+/* 18px */
+/*20 px*/
+/*24px h2 tag */
+/* 32px */
+/* 36px */
+/* 40px  h1 tag* /
+$font-size-7xl: 4rem; /*64px */
+.ink-blue {
+  color: #00244e;
+}
 
+.heritage {
+  color: #0a3370;
+}
+
+.bg-lightgray {
+  background: #EFEFEF;
+}
+
+.accordion-header {
+  font-weight: 600;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  color: #0a3370;
+}
+
+.accordion-button.collapsed::after {
+  font-family: "FontAwesome";
+  content: "\f067";
+  font-size: 1rem;
+  color: #0a3370;
+  float: right;
+  background-image: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+  font-family: "FontAwesome";
+  content: "\f068";
+  color: #0a3370;
+  float: right;
+  font-size: 1.25rem;
+  background-image: none;
+  transform: none;
+}
+
+.btn {
+  padding: 0.6rem 0.9rem;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #fdb913;
+  border-color: #fdb913;
+  color: #0a3370;
+}
+.btn-primary:hover {
+  background-color: #fee097;
+  border-color: #fee097;
+  color: #0a3370;
+}
+
+.btn-secondary {
+  background-color: #0a3370;
+  border-color: #0a3370;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #fff;
+  border-color: #fff;
+  color: #0a3370;
+}
+
+.chat-btn {
+  position: fixed;
+  transform: rotate(-90deg);
+  right: -22px;
+  top: 70vh;
+  z-index: 1;
+  font-weight: 600;
+  font-size: var(--font-size-md);
+}
+
+@media only screen and (max-width: 576px) {
+  .mobile-btn-w {
+    width: 100%;
+    margin-bottom: 0.275rem;
+  }
+}
+.card-header {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0a3370;
+  font-family: "Open Sans", sans-serif;
+}
+
+.list-group-item {
+  border: none;
+}
+
+.card-info-header {
+  color: #0a3370;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.card-paragraph {
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.min-h-18 {
+  min-height: 18rem;
+}
+
+.snhu-logo-footer {
+  height: auto;
+  width: 100%;
+}
+
+footer {
+  background-color: #00244E !important;
+  color: #FFFFFF;
+}
+
+footer p, footer a {
+  color: #FFFFFF;
+}
+
+footer a {
+  font-size: 1rem;
+}
+
+footer.mobile {
+  display: none;
+}
+
+.navbar {
+  background-color: #00244e;
+}
+
+@media only screen and (max-width: 576px) {
+  .navbar > .container {
+    justify-content: center;
+    text-align: center;
+  }
+  .navbar-nav {
+    flex-direction: row;
+  }
+}
+h1 {
+  color: #0a3370;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  color: #00244e;
+  font-weight: 700;
+  font-size: 1.5rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+h3 {
+  color: #00244e;
+  font-size: 1.5rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 900;
+}
+
+p,
+li {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #666666;
+  line-height: 1.5;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+a.head-link {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 24px;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  text-decoration: none;
+}
+
+a.head-link:hover,
+a.head-link:focus {
+  -webkit-text-decoration: underline #70abdb 2px;
+          text-decoration: underline #70abdb 2px;
+  text-underline-offset: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+
+a {
+  color: #0a3370;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+td,
+th {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  color: #00244e !important;
+  font-weight: 700 !important;
+}
+
+th, td {
+  border: 1px solid #00244e;
+  padding: 8px;
+}
+
+th {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 16px !important;
+  line-height: 28px;
+  color: white !important;
+  font-weight: 700 !important;
+  background-color: #00244e;
+  text-align: center;
+  width: 33.33%;
+}
+
+td {
+  text-align: center;
+  background-color: #fff;
+}
+
+.border-bottom {
+  height: 5rem;
+}
+
+.survey-section {
+  background-color: #efefef;
+}
+
+.wForm .matrixLayout th.headerCol {
+  width: 50%;
+  padding: 0.5rem;
+}
+
+.MsoNormal {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 16px !important;
+  line-height: 28px;
+  color: #00244e !important;
+  font-weight: 700 !important;
+}
+
+.borderbottom {
+  border: none !important;
+  border-bottom: solid 1px #00244e !important;
+  height: 78px;
+}
+
+.smile {
+  border-radius: 50%;
+  box-shadow: -3px 12px 2px -1px #fdb913;
+  margin-left: 50px;
+  width: 75%;
+}
+
+.wForm .matrixLayout .label {
+  padding: 0 !important;
+}
+
+.back-link {
+  font-size: 12px;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+@media only screen and (max-width: 576px) {
+  .wForm .matrixLayout.stacked tr {
+    display: inline-table !important;
+  }
+}
   </style>
   <!--[if lt IE 9]>
         <script src="https://www.snhu.edu/assets/SNHU/js/polyfill/respond.min.js"></script>
@@ -103,6 +399,36 @@
   <script type="text/javascript" async src=https://play.vidyard.com/embed/v4.js></script>
 
   <!-- END FORM: HEAD SECTION -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4NXPNK9L4W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4NXPNK9L4W');
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TM57T68Q');</script>
+  <!-- End Google Tag Manager -->
+  
+  
+<!-- Hotjar Tracking Code for SNHU Properties -->
+<script>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:2360018,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
 
 </head>
 
@@ -154,7 +480,7 @@
             to help people with FAFSA questions!</p>
         </div>
         <div class="col-md-1"></div>
-        <div class="col-md-6">
+        <div class="col-md-6 ">
           <img class="img-fluid smile" src="https://image.dream.snhu.edu/lib/fe9213737460007973/m/1/565e9cd2-5d39-45f0-956d-b1ba1ed064a4.png" alt="lady smiling">
         </div>
       </div>
