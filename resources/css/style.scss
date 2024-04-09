@@ -16,7 +16,6 @@ body {
 }
 
 td,
-.td-adj,
 th {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -25,18 +24,26 @@ th {
   font-weight: 700 !important;
 }
 
-.td-adj,
-.inputWrapper,
-.actions {
-  padding: 0.5rem !important;
+th, td {
+  border: 1px solid $ink-blue;
+  padding: 8px;
+  
 }
 
 th {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-size: 16px !important;
   line-height: 28px;
-  color: $ink-blue !important;
+  color: white !important;
   font-weight: 700 !important;
+  background-color: $ink-blue;
+  text-align: center;
+  width: 33.33%;
+}
+
+td {
+  text-align: center;
+  background-color: #fff;
 }
 
 .border-bottom {
@@ -66,23 +73,12 @@ th {
   height: 78px;
 }
 
-/* Rectangle 52 */
-.belong-section {
-  background: linear-gradient(rgba(0, 36, 78, 0.8), rgba(0, 36, 78, 0.8)),
-    url(../images/campus.png);
-  background-position: center top;
-  background-repeat: no-repeat;
-}
+
 
 .smile {
   border-radius: 50%;
   box-shadow: -3px 12px 2px -1px #fdb913;
-  transform: translate(0, -166px);
-  float: right;
-  display: block;
-  margin: 0 auto; /* This will center the image horizontally */
-  width: 30%; /* Ensure the image doesn't exceed the width of its container */
-  height: auto;
+  width: 75%;
 }
 
 .wForm .matrixLayout .label {
@@ -95,21 +91,10 @@ th {
 }
 
 @media only screen and (max-width: $breakpoint-sm) {
-  .smile {
-    float: none;
-    transform: none;
-    width: 100%;
-    border-radius: 0;
-    box-shadow: none;
-  }
+  
 
   .wForm .matrixLayout.stacked tr {
     display: inline-table !important;
   }
 
-  .belong-section {
-    background: linear-gradient(rgba(0, 36, 78, 0.8), rgba(0, 36, 78, 0.8));
-    background-position: center top;
-    background-repeat: no-repeat;
-  }
 }

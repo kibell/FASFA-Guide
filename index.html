@@ -8,7 +8,7 @@
   <meta name="keywords" content="">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Survey Page </title>
+  <title> FAFSA Guide </title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -46,52 +46,59 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="referrer" content="no-referrer-when-downgrade">
   <!-- THIS SCRIPT NEEDS TO BE LOADED FIRST BEFORE wforms.js -->
-  <script type="text/javascript" data-for="FA__DOMContentLoadedEventDispatch" src=https://snhu.tfaforms.net/js/FA__DOMContentLoadedEventDispatcher.js defer></script>
-          <script type="text/javascript">
-      document.addEventListener("FA__DOMContentLoaded", function(){
-          const FORM_TIME_START = Math.floor((new Date).getTime()/1000);
-          let formElement = document.getElementById("tfa_0");
-          if (null === formElement) {
-              formElement = document.getElementById("0");
+  <script type="text/javascript" data-for="FA__DOMContentLoadedEventDispatch"
+    src=https://snhu.tfaforms.net/js/FA__DOMContentLoadedEventDispatcher.js defer></script>
+  <script type="text/javascript">
+    document.addEventListener("FA__DOMContentLoaded", function () {
+      const FORM_TIME_START = Math.floor((new Date).getTime() / 1000);
+      let formElement = document.getElementById("tfa_0");
+      if (null === formElement) {
+        formElement = document.getElementById("0");
+      }
+      let appendJsTimerElement = function () {
+        let formTimeDiff = Math.floor((new Date).getTime() / 1000) - FORM_TIME_START;
+        let cumulatedTimeElement = document.getElementById("tfa_dbCumulatedTime");
+        if (null !== cumulatedTimeElement) {
+          let cumulatedTime = parseInt(cumulatedTimeElement.value);
+          if (null !== cumulatedTime && cumulatedTime > 0) {
+            formTimeDiff += cumulatedTime;
           }
-          let appendJsTimerElement = function(){
-              let formTimeDiff = Math.floor((new Date).getTime()/1000) - FORM_TIME_START;
-              let cumulatedTimeElement = document.getElementById("tfa_dbCumulatedTime");
-              if (null !== cumulatedTimeElement) {
-                  let cumulatedTime = parseInt(cumulatedTimeElement.value);
-                  if (null !== cumulatedTime && cumulatedTime > 0) {
-                      formTimeDiff += cumulatedTime;
-                  }
-              }
-              let jsTimeInput = document.createElement("input");
-              jsTimeInput.setAttribute("type", "hidden");
-              jsTimeInput.setAttribute("value", formTimeDiff.toString());
-              jsTimeInput.setAttribute("name", "tfa_dbElapsedJsTime");
-              jsTimeInput.setAttribute("id", "tfa_dbElapsedJsTime");
-              jsTimeInput.setAttribute("autocomplete", "off");
-              if (null !== formElement) {
-                  formElement.appendChild(jsTimeInput);
-              }
-          };
-          if (null !== formElement) {
-              if(formElement.addEventListener){
-                  formElement.addEventListener('submit', appendJsTimerElement, false);
-              } else if(formElement.attachEvent){
-                  formElement.attachEvent('onsubmit', appendJsTimerElement);
-              }
-          }
-      });
+        }
+        let jsTimeInput = document.createElement("input");
+        jsTimeInput.setAttribute("type", "hidden");
+        jsTimeInput.setAttribute("value", formTimeDiff.toString());
+        jsTimeInput.setAttribute("name", "tfa_dbElapsedJsTime");
+        jsTimeInput.setAttribute("id", "tfa_dbElapsedJsTime");
+        jsTimeInput.setAttribute("autocomplete", "off");
+        if (null !== formElement) {
+          formElement.appendChild(jsTimeInput);
+        }
+      };
+      if (null !== formElement) {
+        if (formElement.addEventListener) {
+          formElement.addEventListener('submit', appendJsTimerElement, false);
+        } else if (formElement.attachEvent) {
+          formElement.attachEvent('onsubmit', appendJsTimerElement);
+        }
+      }
+    });
   </script>
 
-  <link href=https://snhu.tfaforms.net/dist/form-builder/5.0.0/wforms-layout.css?v=8b5c9ffd0b6fc88dc72529725004f6b69b9e0ae8 rel="stylesheet" type="text/css" />
+  <link
+    href=https://snhu.tfaforms.net/dist/form-builder/5.0.0/wforms-layout.css?v=8b5c9ffd0b6fc88dc72529725004f6b69b9e0ae8
+    rel="stylesheet" type="text/css" />
 
   <link href=https://snhu.tfaforms.net/uploads/themes/theme-41.css rel="stylesheet" type="text/css" />
-  <link href=https://snhu.tfaforms.net/dist/form-builder/5.0.0/wforms-jsonly.css?v=8b5c9ffd0b6fc88dc72529725004f6b69b9e0ae8 rel="alternate stylesheet" title="This stylesheet activated by javascript" type="text/css" />
-  <script type="text/javascript" src=https://snhu.tfaforms.net/wForms/3.11/js/wforms.js?v=8b5c9ffd0b6fc88dc72529725004f6b69b9e0ae8></script>
+  <link
+    href=https://snhu.tfaforms.net/dist/form-builder/5.0.0/wforms-jsonly.css?v=8b5c9ffd0b6fc88dc72529725004f6b69b9e0ae8
+    rel="alternate stylesheet" title="This stylesheet activated by javascript" type="text/css" />
+  <script type="text/javascript"
+    src=https://snhu.tfaforms.net/wForms/3.11/js/wforms.js?v=8b5c9ffd0b6fc88dc72529725004f6b69b9e0ae8></script>
   <script type="text/javascript">
-      wFORMS.behaviors.prefill.skip = false;
+    wFORMS.behaviors.prefill.skip = false;
   </script>
-      <script type="text/javascript" src=https://snhu.tfaforms.net/wForms/3.11/js/localization-en_US.js?v=8b5c9ffd0b6fc88dc72529725004f6b69b9e0ae8></script>
+  <script type="text/javascript"
+    src=https://snhu.tfaforms.net/wForms/3.11/js/localization-en_US.js?v=8b5c9ffd0b6fc88dc72529725004f6b69b9e0ae8></script>
 
   <script type="text/javascript" async src=https://play.vidyard.com/embed/v4.js></script>
 
@@ -114,9 +121,9 @@
         </a>
         <div class=" justify-content-end" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a href="#" class="nav-link head-link mx-3" target="_blank">Text</a>
-            <a href="#" class="nav-link head-link mx-3 " target="_blank">Call</a>
-            <a href="#" class="nav-link head-link mx-3 " target="_blank">Email</a>
+            <a href="Tel:8883870861" class="nav-link head-link mx-3 " target="_blank">Call Us</a>
+            <a href="sms:8883870861" class="nav-link head-link mx-3" target="_blank">Text Us</a>
+            <a href="mailto:admissions@snhu.edu" class="nav-link head-link mx-3 " target="_blank">Email US</a>
 
           </div>
         </div>
@@ -125,155 +132,190 @@
   </header>
 
   <!---Dear-->
-  <section class="belong-section">
+  <section class="">
     <div class="container">
-      <div class="row">
+      <div class="row py-5">
 
-        <div class="meet-div d-flex  align-items-center col-md-10 py-5">
-          <h1 class="text-white"> Dear {Preferred}: <br>
-            You belong here. And we believe in you. </h1>
-          </div>
-         
+        <div class=" col-md-5">
+          <h1 class=""> “Which FAFSA year do I use?”</h1>
+          <br>
+          <h2>It can be confusing!</h2>
+          <p>In order to qualify for financial aid at SNHU, students need to complete the Free Application for Federal
+            Student Aid, or FAFSA at <a href="https://studentaid.gov/h/apply-for-aid/fafsa" class="">StudentAid.Gov.</a> <br><br>
+
+            But on the <a href="https://studentaid.gov/h/apply-for-aid/fafsa" >StudentAid.Gov</a> website, there are often two FAFSA financial aid form years to choose from. Which
+            one do you need to complete as an online student at SNHU?<br><br>
+
+            It’s determined by the month you’re starting your first term within a financial aid year. Use the chart on
+            this page to see the FAFSA financial aid year you should use.<br><br>
+
+            The good news is that no matter what term you start at SNHU, you only have to complete the FAFSA once year
+            to keep applying for financial aid. Questions? Call SNHU <a href="tel:8774557648">Student Financial Services at 877.455.7648.</a> We LOVE
+            to help people with FAFSA questions!</p>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-6">
+          <img class="img-fluid smile" src="https://image.dream.snhu.edu/lib/fe9213737460007973/m/1/565e9cd2-5d39-45f0-956d-b1ba1ed064a4.png" alt="lady smiling">
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-<div class="smiley container float-right" >
-  <img class="img-fluid smile" src="./resources/images/SMILE.png" alt="lady smiling">
-</div>
-    
-    <section class="p-5">
-      <div class="container">
-        <div class="row">
-          <a class="back-link" href=""> &lt;  Back to Student Success Page</a>
-        </div>
-        <div class="row">
-          <div class="col-md-10 py-5">
-            
-            <h2>Let's take a minute to see how you're feeling</h2>
-            <p>To make sure you’re feeling tip-top for your first term, we’ve created a (very) brief survey to see how you’re feeling about a few things that sometimes cause students to feel nervous.
-              <br> <br>
-              Your admission counselor will receive your answers and reach out to you with help and info if you’re not feeling super confident on anything.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-        
-   
- 
+  <section class="bg-lightgray undergrad">
+    <div class="container">
+      <div class="row py-5">
+        <h3 class="mb-5">Undergraduate Online Terms</h3>
+        <table border="1">
+          <tr class="text-white">
+            <th>Term Name</th>
+            <th>Term Start Date</th>
+            <th>Complete This FAFSA Financial Aid Year</th>
+          </tr>
+          <tr>
+            <td>2024 C-3 (May­­­ – Jun)</td>
+            <td>May 6, 2024</td>
+            <td>2023-24</td>
+          </tr>
+          <tr>
+            <td>2024 C-4 (Jul – Aug)</td>
+            <td>July 1, 2024</td>
+            <td>2024-25</td>
+          </tr>
+          <tr>
+            <td>2024 C-5 (Sept – Oct)</td>
+            <td>September 2, 2024</td>
+            <td>2024-25</td>
+          </tr>
+          <tr>
+            <td>
+              2024 C-6 (Oct – Dec)
+            </td>
+            <td>October 28, 2024</td>
+            <td>2024-25</td>
+          </tr>
+          <tr>
+            <td>2025 C-1 (Jan – Mar)</td>
+            <td>January 6, 2025</td>
+            <td>2024-25</td>
+          </tr>
+          <tr>
+            <td>2025 C-2 (Mar – Apr)</td>
+            <td>March 3, 2025</td>
+            <td>2024-25</td>
+          </tr>
+          <tr>
+            <td>2025 C-3 (May – Jun)</td>
+            <td>May 5, 2025</td>
+            <td>2024-25</td>
+          </tr>
+          <tr>
+            <td>2025 C-4 (Jun – Aug)</td>
+            <td>June 30, 2025</td>
+            <td>2025-26</td>
+          </tr>
+          <tr>
+            <td>2025 C-5 (Sep ­– Oct)</td>
+            <td>September 1,2025</td>
+            <td>2025-26</td>
+          </tr>
+          <tr>
+            <td>2025 C-6 (Oct ­– Dec)</td>
+            <td>October 27, 2025</td>
+            <td>2025-26</td>
+          </tr>
+          <tr>
+            <td>2026 C-1 (Jan – Mar)</td>
+            <td>January 5,2026</td>
+            <td>2025-26</td>
+          </tr>
+          <tr>
+            <td>2026 C-2 (Mar – Apr)</td>
+            <td>March 2, 2026</td>
+            <td>2025-26</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
 
-  <!--Survey section-->
-  <section class="survey-section">
-  <div class="container">
-    <!-- FORM: BODY SECTION -->
-  <div class="wFormHeader"></div>
-  <style type="text/css">
-              #tfa_89,
-              *[id^="tfa_89["] {
-                  width: 70% !important;
-              }
-              #tfa_89-D,
-              *[id^="tfa_89["][class~="field-container-D"] {
-                  width: auto !important;
-              }
-          </style><div class=""><div class="wForm" id="5054907-WRPR" data-language="en_US" dir="ltr">
-<div class="codesection" id="code-5054907"></div>
-<form method="post" action=https://snhu.tfaforms.net/api_v2/workflow/processor class="hintsBelow labelsAbove p-0" id="5054907" role="form">
-<table class="matrixLayout ">
-<thead><tr class="headerRow borderbottom" id="tfa_4-MTRX">
-<th></th>
-<th scope="col">Super Confident!&nbsp;</th>
-<th scope="col">Confident!&nbsp;</th>
-<th scope="col">A Bit Shaky</th>
-<th scope="col">Help!</th>
-</tr></thead>
-<tbody>
-<tr id="tfa_4" class="oneField borderbottom " role="radiogroup" aria-labelledby="tfa_4-L" data-tfa-labelledby="-L tfa_4-L">
-<th scope="row" class="headerCol"><label id="tfa_4-L" for="tfa_4" class="label "><p class="MsoNormal" style="margin: 0in; font-size: 12pt; font-family: Aptos, sans-serif;">How are you feeling about your tech requirements (having a laptop, internet connection, etc.)?</p></label></th>
-<td><span class="oneChoice"><input type="radio" value="tfa_5" class="" id="tfa_5" name="tfa_4" title="Super Confident!&amp;nbsp;" data-tfa-parent-id="tfa_4"></span></td>
-<td><span class="oneChoice"><input type="radio" value="tfa_6" class="" id="tfa_6" name="tfa_4" title="Confident!&amp;nbsp;" data-tfa-parent-id="tfa_4"></span></td>
-<td><span class="oneChoice"><input type="radio" value="tfa_7" class="" id="tfa_7" name="tfa_4" title="A Bit Shaky" data-tfa-parent-id="tfa_4"></span></td>
-<td><span class="oneChoice"><input type="radio" value="tfa_8" class="" id="tfa_8" name="tfa_4" title="Help!" data-tfa-parent-id="tfa_4"></span></td>
-</tr>
-<tr id="tfa_14" class="oneField borderbottom" role="radiogroup" aria-labelledby="tfa_14-L" data-tfa-labelledby="-L tfa_14-L">
-<th scope="row" class="headerCol"><label id="tfa_14-L" for="tfa_14" class="label "><p class="MsoNormal" style="margin: 0in; font-size: 12pt; font-family: Aptos, sans-serif;">How are you feeling about being able to log into your SNHU email, mySNHU and your Brightspace courses?</p></label></th>
-<td><span class="oneChoice"><input type="radio" value="tfa_15" class="" id="tfa_15" name="tfa_14" title="Super Confident!&amp;nbsp;" data-tfa-parent-id="tfa_14"></span></td>
-<td><span class="oneChoice"><input type="radio" value="tfa_16" class="" id="tfa_16" name="tfa_14" title="Confident!&amp;nbsp;" data-tfa-parent-id="tfa_14"></span></td>
-<td><span class="oneChoice"><input type="radio" value="tfa_17" class="" id="tfa_17" name="tfa_14" title="A Bit Shaky" data-tfa-parent-id="tfa_14"></span></td>
-<td><span class="oneChoice"><input type="radio" value="tfa_18" class="" id="tfa_18" name="tfa_14" title="Help!" data-tfa-parent-id="tfa_14"></span></td>
-</tr>
-<tr id="tfa_24" class="oneField borderbottom    " role="radiogroup" aria-labelledby="tfa_24-L" data-tfa-labelledby="-L tfa_24-L">
-<th scope="row" class="headerCol"><label id="tfa_24-L" for="tfa_24" class="label "><p class="MsoNormal" style="margin: 0in; font-size: 12pt; font-family: Aptos, sans-serif;">How are you feeling about obtaining and accessing your assigned books and course materials?</p></label></th>
-<td><span class="oneChoice"><input type="radio" value="tfa_25" class="" id="tfa_25" name="tfa_24" title="Super Confident!&amp;nbsp;" data-tfa-parent-id="tfa_24"></span></td>
-<td><span class="oneChoice"><input type="radio" value="tfa_26" class="" id="tfa_26" name="tfa_24" title="Confident!&amp;nbsp;" data-tfa-parent-id="tfa_24"></span></td>
-<td><span class="oneChoice"><input type="radio" value="tfa_27" class="" id="tfa_27" name="tfa_24" title="A Bit Shaky" data-tfa-parent-id="tfa_24"></span></td>
-<td><span class="oneChoice"><input type="radio" value="tfa_28" class="" id="tfa_28" name="tfa_24" title="Help!" data-tfa-parent-id="tfa_24"></span></td>
-</tr>
-<tr id="tfa_34" class="oneField borderbottom   " role="radiogroup" aria-labelledby="tfa_34-L" data-tfa-labelledby="-L tfa_34-L">
-<th scope="row" class="headerCol"><label id="tfa_34-L" for="tfa_34" class="label "><p class="MsoNormal" style="margin: 0in; font-size: 12pt; font-family: Aptos, sans-serif;">How are you feeling about knowing how much time you’ll need to spend of your coursework each week and what days and times you’ll schedule to study?</p></label></th>
-<td><span class="oneChoice"><input type="radio" value="tfa_35" class="" id="tfa_35" name="tfa_34" title="Super Confident!&amp;nbsp;" data-tfa-parent-id="tfa_34"></span></td>
-<td><span class="oneChoice"><input type="radio" value="tfa_36" class="" id="tfa_36" name="tfa_34" title="Confident!&amp;nbsp;" data-tfa-parent-id="tfa_34"></span></td>
-<td><span class="oneChoice"><input type="radio" value="tfa_37" class="" id="tfa_37" name="tfa_34" title="A Bit Shaky" data-tfa-parent-id="tfa_34"></span></td>
-<td><span class="oneChoice"><input type="radio" value="tfa_38" class="" id="tfa_38" name="tfa_34" title="Help!" data-tfa-parent-id="tfa_34"></span></td>
-</tr>
-<tr id="tfa_44" class="oneField borderbottom    " role="radiogroup" aria-labelledby="tfa_44-L" data-tfa-labelledby="-L tfa_44-L">
-<th scope="row" class="headerCol"><label id="tfa_44-L" for="tfa_44" class="label "><p class="MsoNormal" style="margin: 0in; font-size: 12pt; font-family: Aptos, sans-serif;">How confident are you about knowing how to contact all the SNHU support teams who are ready to help you (advisor, faculty, tutors, mental health counselors, academic accommodations, etc.)?</p></label></th>
-<td><span class="oneChoice"><input type="radio" value="tfa_45" class="" id="tfa_45" name="tfa_44" title="Super Confident!&amp;nbsp;" data-tfa-parent-id="tfa_44"></span></td>
-<td><span class="oneChoice"><input type="radio" value="tfa_46" class="" id="tfa_46" name="tfa_44" title="Confident!&amp;nbsp;" data-tfa-parent-id="tfa_44"></span></td>
-<td><span class="oneChoice"><input type="radio" value="tfa_47" class="" id="tfa_47" name="tfa_44" title="A Bit Shaky" data-tfa-parent-id="tfa_44"></span></td>
-<td><span class="oneChoice"><input type="radio" value="tfa_48" class="" id="tfa_48" name="tfa_44" title="Help!" data-tfa-parent-id="tfa_44"></span></td>
-</tr>
-<tr id="tfa_54" class="oneField borderbottom   " role="radiogroup" aria-labelledby="tfa_54-L" data-tfa-labelledby="-L tfa_54-L">
-<th scope="row" class="headerCol"><label id="tfa_54-L" for="tfa_54" class="label "><p class="MsoNormal" style="margin: 0in; font-size: 12pt; font-family: Aptos, sans-serif;">How do you feel about your ability to find and complete your assignments in Brightspace?</p></label></th>
-<td><span class="oneChoice"><input type="radio" value="tfa_55" class="" id="tfa_55" name="tfa_54" title="Super Confident!&amp;nbsp;" data-tfa-parent-id="tfa_54"></span></td>
-<td><span class="oneChoice"><input type="radio" value="tfa_56" class="" id="tfa_56" name="tfa_54" title="Confident!&amp;nbsp;" data-tfa-parent-id="tfa_54"></span></td>
-<td><span class="oneChoice"><input type="radio" value="tfa_57" class="" id="tfa_57" name="tfa_54" title="A Bit Shaky" data-tfa-parent-id="tfa_54"></span></td>
-<td><span class="oneChoice"><input type="radio" value="tfa_58" class="" id="tfa_58" name="tfa_54" title="Help!" data-tfa-parent-id="tfa_54"></span></td>
-</tr>
-<tr id="tfa_64" class="oneField borderbottom    " role="radiogroup" aria-labelledby="tfa_64-L" data-tfa-labelledby="-L tfa_64-L">
-<th scope="row" class="headerCol"><label id="tfa_64-L" for="tfa_64" class="label "><p class="MsoNormal" style="margin: 0in; font-size: 12pt; font-family: Aptos, sans-serif;">How are you feeling about paying for college?</p></label></th>
-<td><span class="oneChoice"><input type="radio" value="tfa_65" class="" id="tfa_65" name="tfa_64" title="Super Confident!&amp;nbsp;" data-tfa-parent-id="tfa_64"></span></td>
-<td><span class="oneChoice"><input type="radio" value="tfa_66" class="" id="tfa_66" name="tfa_64" title="Confident!&amp;nbsp;" data-tfa-parent-id="tfa_64"></span></td>
-<td><span class="oneChoice"><input type="radio" value="tfa_67" class="" id="tfa_67" name="tfa_64" title="A Bit Shaky" data-tfa-parent-id="tfa_64"></span></td>
-<td><span class="oneChoice"><input type="radio" value="tfa_68" class="" id="tfa_68" name="tfa_64" title="Help!" data-tfa-parent-id="tfa_64"></span></td>
-</tr>
-<tr id="tfa_74" class="oneField borderbottom   " role="radiogroup" aria-labelledby="tfa_74-L" data-tfa-labelledby="-L tfa_74-L">
-<th scope="row" class="headerCol"><label id="tfa_74-L" for="tfa_74" class="label "><p class="MsoNormal" style="margin: 0in; font-size: 12pt; font-family: Aptos, sans-serif;">How much do you believe in yourself to succeed this term, and how much do you feel that you belong at SNHU? (We believe in you!)</p></label></th>
-<td><span class="oneChoice"><input type="radio" value="tfa_75" class="" id="tfa_75" name="tfa_74" title="Super Confident!&amp;nbsp;" data-tfa-parent-id="tfa_74"></span></td>
-<td><span class="oneChoice"><input type="radio" value="tfa_76" class="" id="tfa_76" name="tfa_74" title="Confident!&amp;nbsp;" data-tfa-parent-id="tfa_74"></span></td>
-<td><span class="oneChoice"><input type="radio" value="tfa_77" class="" id="tfa_77" name="tfa_74" title="A Bit Shaky" data-tfa-parent-id="tfa_74"></span></td>
-<td><span class="oneChoice"><input type="radio" value="tfa_78" class="" id="tfa_78" name="tfa_74" title="Help!" data-tfa-parent-id="tfa_74"></span></td>
-</tr>
-<tr id="tfa_84" class="oneField borderbottom    " role="radiogroup" aria-labelledby="tfa_84-L" data-tfa-labelledby="-L tfa_84-L">
-  <th scope="row" class="headerCol"><label id="tfa_84-L" for="tfa_84" class="label "><p class="MsoNormal" style="margin: 0in; font-size: 12pt; font-family: Aptos, sans-serif;"><span style="font-size: 12pt;">How are you feeling overall (health, family, work, living situation)?</span><span style="font-size: medium;"></span></p></label></th>
-  <td><span class="oneChoice"><input type="radio" value="tfa_85" class="" id="tfa_85" name="tfa_84" title="Super Confident!&amp;nbsp;" data-tfa-parent-id="tfa_84"></span>
-  </td>
-    
-<td><span class="oneChoice"><input type="radio" value="tfa_86" class="" id="tfa_86" name="tfa_84" title="Confident!&amp;nbsp;" data-tfa-parent-id="tfa_84"></span></td>
-<td><span class="oneChoice"><input type="radio" value="tfa_87" class="" id="tfa_87" name="tfa_84" title="A Bit Shaky" data-tfa-parent-id="tfa_84"></span></td>
-<td><span class="oneChoice"><input type="radio" value="tfa_88" class="" id="tfa_88" name="tfa_84" title="Help!" data-tfa-parent-id="tfa_84"></span></td>
-</tr>
-</tbody>
-</table>
-<div class="oneField  field-container-D    " id="tfa_89-D">
-<label id="tfa_89-L" class="label preField " for="tfa_89"><span class="td-adj">Are there any other subjects we can help you with? (Optional) &nbsp;</span></label><br><div class="inputWrapper"><textarea cols="70%" rows="7%" id="tfa_89" name="tfa_89" title="Are there any other subjects we can help you with? (Optional)  " class=""></textarea></div>
-</div>
-<div class="oneField field-container-D     wf-acl-hidden" id="tfa_90-D">
-<label id="tfa_90-L" class="label preField " for="tfa_90">SFID</label><br><div class="inputWrapper"><input type="text" id="tfa_90" name="tfa_90" value="" title="SFID" class=""></div>
-</div>
-<div class="actions" id="5054907-A" data-contentid="submit_button"><input type="submit" data-label="Submit" class="primaryAction" id="submit_button" value="Submit"></div>
-<div style="clear:both"></div>
-<input type="hidden" value="5054907" name="tfa_dbFormId" id="tfa_dbFormId"><input type="hidden" value="" name="tfa_dbResponseId" id="tfa_dbResponseId"><input type="hidden" value="3f4a7d30666188bb2c10843c1c737a72" name="tfa_dbControl" id="tfa_dbControl"><input type="hidden" value="" name="tfa_dbWorkflowSessionUuid" id="tfa_dbWorkflowSessionUuid"><input type="hidden" value="" name="tfa_noOverWriteFields" id="tfa_noOverWriteFields"><input type="hidden" value="10" name="tfa_dbVersionId" id="tfa_dbVersionId"><input type="hidden" value="" name="tfa_switchedoff" id="tfa_switchedoff">
-</form>
-</div></div>
+  <section class="grad">
+    <div class="container">
+      <div class="row py-5">
+        <h3 class="mb-5">Graduate Online Terms</h3>
+        <table border="1">
+          <tr class="text-white">
+            <th>Term Name</th>
+            <th>Term Start Date</th>
+            <th>Complete This FAFSA Financial Aid Year</th>
+          </tr>
+          <tr>
+            <td>2024 D-2 (May – Jul)</td>
+            <td>May 13, 2024</td>
+            <td>2023-24</td>
+          </tr>
+          <tr>
+            <td>2024 D-3 (Jul – Oct)</td>
+            <td>July 29, 2024</td>
+            <td>2024-25</td>
+          </tr>
+          <tr>
+            <td>2024 D-4 (Oct – Dec)</td>
+            <td>October 14, 2024</td>
+            <td>2024-25</td>
+          </tr>
+          <tr>
+            <td>
+              No 2024 D5 Term
+            </td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2025 D-1 (Jan – Mar)</td>
+            <td>January 6, 2025</td>
+            <td>2024-25</td>
+          </tr>
+          <tr>
+            <td>2025 D-2 (Mar – Apr)</td>
+            <td>March 24, 2025</td>
+            <td>2024-25</td>
+          </tr>
+          <tr>
+            <td>2025 D-3 (Jun – Aug)</td>
+            <td>Jun 9, 2025</td>
+            <td>2024-25</td>
+          </tr>
+          <tr>
+            <td>2025 D-4 (Aug ­– Nov)</td>
+            <td>August 25,   2025</td>
+            <td>2025-26</td>
+          </tr>
+          <tr>
+            <td>2025 D-5 (Nov ­– Jan)</td>
+            <td>November 10,   2025</td>
+            <td>2025-26</td>
+          </tr>
+          <tr>
+            <td>2026 D-1 (Feb – Apr)</td>
+            <td>February 2,   2025</td>
+            <td>2025-26</td>
+          </tr>
+          <tr>
+            <td>2026 D-2 (Apr – Jun)</td>
+            <td>April 20, 2026</td>
+            <td>2025-26</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
 
-    
-  </div>
 
-</section>
+
   <!--Accreditation-->
 
-  <div role="region" aria-label="Accreditations" class="container-fluid align-items-center text-center py-5 bg-light accreditation">
+  <div role="region" aria-label="Accreditations"
+    class="container-fluid align-items-center text-center py-5 bg-light accreditation">
     <img class="col-10 col-xxl-6"
       src="https://client-data.knak.io/production/email_assets/5fd10b569d941/URLXxrrgwra1n8IolHbmjqoC3cLBsPysUnEDKV6p.png"
       alt="SNHU accreditation logos" width="100%" height="auto">
@@ -285,8 +327,8 @@
     <div class="col-10 d-flex flex-wrap justify-content-between align-items-center px-3 px-md-5 py-5 mx-auto">
       <p class="col-md-4 lh-lg" style="color:#fff"><strong>SNHU Admission</strong><br>
         55 S. Commercial St, Manchester, NH 03101<br>
-         Phone: 888.387.0861<br>
-         admissions@snhu.edu</p>
+        Phone: 888.387.0861<br>
+        admissions@snhu.edu</p>
       <a href="https://www.snhu.edu/" target="_blank"
         class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
         <img
